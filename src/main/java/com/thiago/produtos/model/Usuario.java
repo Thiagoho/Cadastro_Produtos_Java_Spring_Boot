@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
@@ -15,7 +16,7 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotEmpty(message = "Campo não de ser em Branco!")
+	@NotBlank(message = "Campo não de ser em Branco!")
 	private String nome;
 	
 	@NotNull(message = "Email é Obrigatório!")
@@ -58,5 +59,13 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public Usuario(Long id, String nome, String email, String senha) {
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+	}
+	
 	
 }

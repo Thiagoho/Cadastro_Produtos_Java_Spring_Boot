@@ -146,7 +146,6 @@ public class Tv {
 	public Tv(Long id, String nome, String marca, String modelo, BigDecimal preco, LocalDate dataLancamento,
 			int estoque, String descricao, double tamanhoTela, String resolucao, String tipoTela, boolean smartTv,
 			String conexoes) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.marca = marca;
