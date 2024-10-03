@@ -56,4 +56,11 @@ public class TvController {
 		tvService.deletarTv(id);;
 		return "redirect:/tv/listar";
 	}
+	
+	@GetMapping("/tv/{id}")
+	public String detalhesTv(@PathVariable Long id, Model model ) {
+		Tv tv = tvService.findById(id);
+		model.addAttribute("tv", tv);
+		return "detalhes-tv";
+	}
 }

@@ -27,4 +27,8 @@ public class TvService {
 	public Tv buscarTv(Long id) {
 		return tvRepository.findById(id).orElse(null);
 	}
+	public Tv findById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
